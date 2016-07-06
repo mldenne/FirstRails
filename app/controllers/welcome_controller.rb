@@ -9,8 +9,8 @@ class WelcomeController < ApplicationController
   end
 
   def lorem
-    if params[:id] == "standard"
-      standard
+    if params[:id] == "standard" # && params[:num].to_i > 1
+      standard # * params[:num].to_i
     else
       render text: "Wrong lorem selected."
     end
